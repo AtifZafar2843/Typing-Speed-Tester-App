@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Tester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-3xl w-full bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Typing Speed Tester</h1>
+        
+        <div class="flex justify-center gap-2 mb-4">
+            <button class="duration-btn bg-gray-200 hover:bg-blue-200 text-gray-700 font-semibold py-1 px-3 rounded transition-colors" data-duration="30">30s Test</button>
+            <button class="duration-btn bg-gray-200 hover:bg-blue-200 text-gray-700 font-semibold py-1 px-3 rounded transition-colors" data-duration="60">1 min Test</button>
+            <button class="duration-btn bg-gray-200 hover:bg-blue-200 text-gray-700 font-semibold py-1 px-3 rounded transition-colors" data-duration="300">5 min Test</button>
+            <button class="duration-btn bg-gray-200 hover:bg-blue-200 text-gray-700 font-semibold py-1 px-3 rounded transition-colors" data-duration="600">10 min Test</button>
+        </div>
+
+        <div class="mb-8">
+            <div id="paragraph" class="text-lg text-gray-700 mb-4 p-4 bg-gray-50 rounded-lg"></div>
+            <div id="input-area" 
+                 class="w-full p-4 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                 contenteditable="true"
+                 spellcheck="false"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                <h3 class="text-sm font-semibold text-blue-600">WPM</h3>
+                <p id="wpm" class="text-2xl font-bold text-blue-700">0</p>
+            </div>
+            <div class="bg-green-50 p-4 rounded-lg text-center">
+                <h3 class="text-sm font-semibold text-green-600">Accuracy</h3>
+                <p id="accuracy" class="text-2xl font-bold text-green-700">0%</p>
+            </div>
+            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                <h3 class="text-sm font-semibold text-purple-600">Time</h3>
+                <p id="time" class="text-2xl font-bold text-purple-700">0s</p>
+            </div>
+        </div>
+
+        <button id="try-again" 
+                class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Try Again
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

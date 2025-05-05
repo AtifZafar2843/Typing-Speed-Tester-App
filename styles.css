@@ -1,0 +1,36 @@
+/* Custom styles for the typing test */
+#input-area:empty:before {
+    content: 'Start typing here...';
+    color: #9CA3AF;
+}
+
+#paragraph span {
+    display: inline-block;
+    position: relative;
+}
+
+#paragraph span.correct {
+    color: #059669;
+}
+
+#paragraph span.incorrect {
+    color: #DC2626;
+    text-decoration: underline;
+}
+
+#paragraph span.current {
+    background-color: #E5E7EB;
+}
+
+/* Smooth transitions */
+#wpm, #accuracy, #time {
+    transition: all 0.3s ease;
+}
+
+/* Prevent text selection */
+#input-area {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+} 
